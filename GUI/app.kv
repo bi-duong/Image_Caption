@@ -1,0 +1,18 @@
+# file: myapp.kv
+
+<CustomButton@Button>:
+    font_size: 20
+    size_hint: 0.8, 0.2
+
+<MyApp>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 10
+        padding: 10
+        CustomButton:
+            text: "Select Image"
+            on_press: root.select_image()
+        Image:
+            id: image
+            source: ""
+            size_hint_y: 0.8
